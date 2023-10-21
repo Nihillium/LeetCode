@@ -101,14 +101,24 @@ public:
 // Ref: https://leetcode.com/problems/sort-colors/solution/
 class Solution {
 public:
-    void sortColors(vector<int>& A) {
-        int zero = 0, two = A.size() - 1;
-        for (int i = 0; i <= two; ) {
-            if (A[i] == 0) {
-                swap(A[i++], A[zero++]);
-            } else if (A[i] == 2) {
-                swap(A[i], A[two--]);
-            } else ++i;
+    void sortColors(vector<int>& nums) {
+        int low = 0;        // Index for the current position of '0'
+        int high = nums.size() - 1; // Index for the current position of '2'
+        int i = 0;           // Loop variable
+
+        while (i <= high) {
+            if (nums[i] == 0) {
+                swap(nums[i], nums[low]); // Swap '0' to the left
+                low++;
+                i++;
+            }
+            else if (nums[i] == 2) {
+                swap(nums[i], nums[high]); // Swap '2' to the right
+                high--;
+            }
+            else {
+                i++; // Skip '1' (white), as it's already in the middle
+            }
         }
     }
 };
