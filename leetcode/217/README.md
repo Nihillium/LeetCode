@@ -53,10 +53,9 @@ public:
 
 
 ## Solution 2.
-<pre>
-	<strong>
-		Time  : O(n log n)
-		Space : O(1)
+<pre><strong>Time  </strong>: O(n log n)</pre>n>
+<strong>
+Space </strong>: O(1)
 	</strong>
 </pre>
 ```cpp
