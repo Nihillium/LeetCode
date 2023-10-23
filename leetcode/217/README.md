@@ -37,7 +37,7 @@
 ```cpp
 /**
 	Time	:	O(n)
-	Space	: O(n)	**/
+	Space	:	O(n)	**/
 
 class Solution {
 public:
@@ -57,7 +57,7 @@ public:
 **Intuition**: Sorting the integer array brings identical values side by side, which makes it straightforward to spot duplicates by comparing adjacent elements.
 ```cpp
 /**
-	Time	: O(n log(n))
+	Time	:	O(n log(n))
 	Space	:	O(1)	**/
 
 class Solution {
