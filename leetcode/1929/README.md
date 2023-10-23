@@ -37,29 +37,16 @@
 ## Solution 1. Brute Force
 
 ```cpp
-// OJ: https://leetcode.com/problems/concatenation-of-array/
-// Author: github.com/lzl124631x
-// Time: O(N)
-// Space: O(1)
+/**
+	Time  : O(n)
+	Space : O(1)	**/
+
 class Solution {
 public:
-    vector<int> getConcatenation(vector<int>& A) {
-        vector<int> ans(A);
-        int N = A.size();
-        for (int i = 0; i < N; ++i) ans.push_back(A[i]);
-        return ans;
+    vector<int> getConcatenation(vector<int>& nums) {
+        vector <int> vv(nums.begin(), nums.end());
+        for (auto &num: nums) vv.push_back(num);
+        return vv;
     }
 };
-```
-
-It's funny to write a python solution.
-
-```python
-# OJ: https://leetcode.com/problems/concatenation-of-array/
-# Author: github.com/lzl124631x
-# Time: O(N)
-# Space: O(1)
-class Solution:
-    def getConcatenation(self, nums: List[int]) -> List[int]:
-        return nums + nums
 ```
