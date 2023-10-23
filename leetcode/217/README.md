@@ -53,11 +53,8 @@ public:
 
 
 ## Solution 2.
-<pre><strong>Time  </strong>: O(n log n)</pre>n>
-<strong>
-Space </strong>: O(1)
-	</strong>
-</pre>
+<pre><strong>Time  :</strong> O(n log n)
+<strong>Space :</strong> O(1)</pre>
 ```cpp
 class Solution {
 public:
