@@ -34,15 +34,11 @@
 </ul>
 
 
-## Solution 1. Brute Force
-<pre><strong>Time  :</strong> O(n)
+## Solution 1.
+<pre>
+<strong>Time  :</strong> O(n)
 <strong>Space :</strong> O(1)
 </pre>
-
-```
-Time  : O(n)
-Space : O(1)
-```
 
 ```cpp
 class Solution {
