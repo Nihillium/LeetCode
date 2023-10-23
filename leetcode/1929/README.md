@@ -39,6 +39,11 @@
 <strong>Space :</strong> O(1)
 </pre>
 
+```
+Time  : O(n)
+Space : O(1)
+```
+
 ```cpp
 class Solution {
 public:
