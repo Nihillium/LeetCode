@@ -45,21 +45,36 @@
 ## Solution 1.
 
 ```cpp
-// OJ: https://leetcode.com/problems/number-of-pairs-of-interchangeable-rectangles/
-// Author: github.com/lzl124631x
-// Time: O(N)
-// Space: O(N)
+/**
+  Time   :  O(n)
+  Space  :  O(n)  **/
+
 class Solution {
 public:
-    long long interchangeableRectangles(vector<vector<int>>& A) {
-        unordered_map<double, int> m;
-        long long ans = 0;
-        for (auto &a : A) {
-            double r = (double)a[0] / a[1];
-            ans += m[r];
-            m[r]++;
+    long long interchangeableRectangles(vector<vector<int>>& rectangles) {
+        // Create an unordered_map to store the reduced width-to-height ratios and their counts.
+        unordered_map<double, long long> ratioCount;
+
+        // Initialize the result variable to keep track of interchangeable pairs.
+        long long result = 0;
+
+        // Iterate through the given rectangles.
+        for (const auto& rect : rectangles) {
+            // Calculate the width-to-height ratio as a double value.
+            double ratio = static_cast<double>(rect[0]) / rect[1];
+
+            // Use the ratio as the key in the map and count occurrences.
+            ratioCount[ratio]++;
         }
-        return ans;
+
+        // Iterate through the map to calculate interchangeable pairs using the combination formula.
+        for (const auto& pair : ratioCount) {
+            long long count = pair.second;
+            result += (count * (count - 1)) / 2;
+        }
+
+        // Return the total count of interchangeable pairs.
+        return result;
     }
 };
 ```
