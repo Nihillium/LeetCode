@@ -33,9 +33,6 @@
 * [Contains Duplicate III (Medium)](https://leetcode.com/problems/contains-duplicate-iii/)
 
 ## Solution 1.
-
-**Intuition**: When tasked with detecting duplicate values in an integer array, an efficient approach is to employ an unordered set. As we traverse the array, we keep a record of unique values in this set. If we come across a value already present in the set, it signals the presence of a duplicate, prompting us to return true. Conversely, if the entire array is processed without encountering any duplicates, we return false.
-
 ```cpp
 /**
   Time   :  O(n)
@@ -56,9 +53,6 @@ public:
 
 
 ## Solution 2.
-
-**Intuition**: Sorting the integer array brings identical values side by side, which makes it straightforward to spot duplicates by comparing adjacent elements.
-
 ```cpp
 /**
   Time   :  O(n log(n))
