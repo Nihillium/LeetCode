@@ -35,12 +35,10 @@
 
 
 ## Solution 1. Brute Force
+# Time	: O(n)
+# Space	: O(1)
 
 ```cpp
-/**
-	Time  : O(n)
-	Space : O(1)	**/
-
 class Solution {
 public:
     vector<int> getConcatenation(vector<int>& nums) {
