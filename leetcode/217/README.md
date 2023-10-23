@@ -26,11 +26,12 @@
 [Apple](https://leetcode.com/company/apple), [Amazon](https://leetcode.com/company/amazon), [Adobe](https://leetcode.com/company/adobe), [Microsoft](https://leetcode.com/company/microsoft)
 
 **Related Topics**:  
-[Array](https://leetcode.com/tag/array/), [Hash Table](https://leetcode.com/tag/hash-table/)
+[Array](https://leetcode.com/tag/array/), [Hash Table](https://leetcode.com/tag/hash-table/), [Sorting](https://leetcode.com/tag/sorting/)
 
 **Similar Questions**:
 * [Contains Duplicate II (Easy)](https://leetcode.com/problems/contains-duplicate-ii/)
-* [Contains Duplicate III (Medium)](https://leetcode.com/problems/contains-duplicate-iii/)
+* [Contains Duplicate III (Hard)](https://leetcode.com/problems/contains-duplicate-iii/)
+* [Make Array Zero by Subtracting Equal Amounts (Easy)](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/)
 
 ## Solution 1.
 ```cpp
