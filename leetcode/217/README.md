@@ -33,11 +33,11 @@
 * [Make Array Zero by Subtracting Equal Amounts (Easy)](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/)
 
 ## Solution 1.
+<pre>
+<strong>Time  :</strong> O(n)
+<strong>Space :</strong> O(n)
+</pre>
 ```cpp
-/**
-  Time   :  O(n)
-  Space  :  O(n)  **/
-
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
@@ -53,8 +53,10 @@ public:
 
 
 ## Solution 2.
-<pre><strong>Time  :</strong> O(n log n)
-<strong>Space :</strong> O(1)</pre>
+<pre>
+<strong>Time  :</strong> O(n log n)
+<strong>Space :</strong> O(1)
+</pre>
 ```cpp
 class Solution {
 public:
