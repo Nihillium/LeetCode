@@ -22,30 +22,35 @@ What if the inputs contain unicode characters? How would you adapt your solution
 
 
 **Related Topics**:  
-[Hash Table](https://leetcode.com/tag/hash-table/), [Sort](https://leetcode.com/tag/sort/)
+[Hash Table](https://leetcode.com/tag/hash-table/), [Sort](https://leetcode.com/tag/sort/), [String](https://leetcode.com/tag/string/)
 
 **Similar Questions**:
 * [Group Anagrams (Medium)](https://leetcode.com/problems/group-anagrams/)
 * [Palindrome Permutation (Easy)](https://leetcode.com/problems/palindrome-permutation/)
 * [Find All Anagrams in a String (Medium)](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+* [Find Resultant Array After Removing Anagrams (Easy)](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/)
 
 ## Solution 1.
 
 ```cpp
-// OJ: https://leetcode.com/problems/valid-anagram/
-// Author: github.com/lzl124631x
-// Time: O(N)
-// Space: O(C)
+/**
+    Time  : O(n)
+    Space : O(U) // U = Unicode Caharcter Set **/
+
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        int cnt[26] = {};
-        for (char c : s) cnt[c - 'a']++;
-        for (char c : t) cnt[c - 'a']--;
-        for (int n : cnt) {
-            if (n) return false;
+        if (s.size() != t.size()) return false;
+        unordered_map<char, int> counts;
+        for (int i = 0; i < s.size(); i++) {
+            counts[s[i]]++;
+            counts[t[i]]--;
+        }
+        for (const auto& c : counts) {
+            if (c.second != 0) return false;
         }
         return true;
     }
 };
+
 ```
