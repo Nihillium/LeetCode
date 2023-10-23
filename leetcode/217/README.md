@@ -33,7 +33,15 @@
 * [Contains Duplicate III (Medium)](https://leetcode.com/problems/contains-duplicate-iii/)
 
 ## Solution 1.
+**Intuition**: To check for duplicate values in an integer array, we can use an unordered set (`st`) to keep track of unique values as we iterate through the array. If we encounter a value that is already in the set, it means there's a duplicate, and we return `true`. If we complete the iteration without finding any duplicates, we return `false`.
 
+**Algorithm**:
+1. Initialize an unordered set `st` to keep track of unique values.
+2. Iterate through each element `num` in the input vector `nums`.
+3. For each `num`, check if it's already in the `st` set using `st.count(num)`.
+4. If `num` is found in the set (i.e., `st.count(num)` is greater than 0), return `true`. This indicates the presence of a duplicate in the array.
+5. If `num` is not found in the set, insert it into the `st` set using `st.insert(num)`. This keeps track of unique elements encountered so far.
+6. After completing the loop without returning `true`, return `false`. This indicates that there are no duplicate elements in the array.
 ```cpp
 // OJ: https://leetcode.com/problems/contains-duplicate/
 // Author: github.com/lzl124631x
@@ -41,9 +49,13 @@
 // Space: O(N)
 class Solution {
 public:
-    bool containsDuplicate(vector<int>& A) {
-        unordered_set<int> s(begin(A), end(A));
-        return s.size() != A.size();
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_set <int> st;
+        for (const auto &num : nums) {
+            if (st.count(num)) return true;
+            else st.insert(num);
+        }
+        return false;
     }
 };
 ```
