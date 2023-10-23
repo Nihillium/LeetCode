@@ -35,7 +35,7 @@ What if the inputs contain unicode characters? How would you adapt your solution
 ```cpp
 /**
     Time  : O(n)
-    Space : O(U) // U = Unicode Caharcter Set **/
+    Space : O(u) // u = Unicode Caharcter Set **/
 
 class Solution {
 public:
