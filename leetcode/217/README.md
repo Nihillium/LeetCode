@@ -53,11 +53,13 @@ public:
 
 
 ## Solution 2.
+<pre>
+	<strong>
+		Time  : O(n log n)
+		Space : O(1)
+	</strong>
+</pre>
 ```cpp
-/**
-  Time   :  O(n log(n))
-  Space  :  O(1)  **/
-
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
