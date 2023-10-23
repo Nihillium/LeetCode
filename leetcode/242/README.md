@@ -31,12 +31,13 @@ What if the inputs contain unicode characters? How would you adapt your solution
 * [Find Resultant Array After Removing Anagrams (Easy)](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/)
 
 ## Solution 1.
+<pre>
+<strong>Time  :</strong> O(n)
+<strong>Space :</strong> O(u)
+<strong>u = Unicode Character Set </strong>
+</pre>
 
 ```cpp
-/**
-    Time  : O(n)
-    Space : O(u) // u = Unicode Caharcter Set **/
-
 class Solution {
 public:
     bool isAnagram(string s, string t) {
