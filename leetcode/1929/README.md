@@ -35,8 +35,9 @@
 
 
 ## Solution 1. Brute Force
-# Time	: O(n)
-# Space	: O(1)
+<pre><strong>Time  :</strong> O(n)
+<strong>Space :</strong> O(1)
+</pre>
 
 ```cpp
 class Solution {
