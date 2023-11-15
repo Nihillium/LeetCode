@@ -1,1 +1,0 @@
-I move my notes for system designs to https://liuzhenglaichn.gitbook.io/systemdesign/. The corresponding repo is https://github.com/lzl124631x/system-design
